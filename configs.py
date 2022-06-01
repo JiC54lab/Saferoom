@@ -31,9 +31,21 @@ Send me any file I will save it in my Database. Also works for channel. Add me t
 📢 **Updates Channel:** [Click Here](https://t.me/JiC54)
 """
 	ABOUT_DEV_TEXT = f"""
-🧑🏻‍💻 **Developer:** JiC54
+🧑🏻‍💻 **JiC54 CHANNELS**
+[Movies and Series 2022](https://t.me/+H_6j47erCp44YjY0)
+[Latest releases only](https://t.me/+uQBJ5JaaLpgyMWI0)
+[Dax songs](https://t.me/+EHBqUrMHnglmZWY8)
+[DC Series](https://t.me/+8eC2YwzHZtUwZDg0)
+[Marvel Movies](https://t.me/+GvVfP9p-YAsyMTY0)
+[Marvel Series](https://t.me/+_dW2BNOdk2hiODVk)
+[African Movies](https://t.me/+6QrMOpOVtKAxOGQ0)
+[WWE wrestling](https://t.me/+LhZuWiqE21NiYzY0)
+[Netflix Series](https://t.me/+DOvLtPVH3wllNDZk)
+[Dax Music Videos](https://t.me/+TRppGR3YPKA1Mzg8)
+[Lyrics](https://t.me/+zQ_jwfFrInY4ZGQ0)
+[Animations](https://t.me/+BeSwOyG7VsAyNzZk)
 
-Remember that developer will Delete Adult Contents from Database. So better don't Store Those Kind of Things.
+**⚠️Remember that Safe Room moderators will Delete Adult Contents from Database and ban the sender. So better don't Store Those Kind of Things.**
 """
 	HOME_TEXT = """
 Hi [{}](tg://user?id={}),\n\nThis is **Safe Room Bot**.
