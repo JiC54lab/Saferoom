@@ -13,9 +13,7 @@ async def reply_forward(message: Message, file_id: int):
         await message.reply_text(
             f"**Here is Sharable Link of this file:**\n"
             f"https://t.me/{Config.BOT_USERNAME}?start=JiC54_{str_to_b64(str(file_id))}\n\n"
-            f"__To Retrive the Stored File, just open the link!__",
-            disable_web_page_preview=True, quote=True)
-                                 
+            f"__To Retrive the Stored File, just open the link!__",                                 
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -25,8 +23,7 @@ async def reply_forward(message: Message, file_id: int):
                         InlineKeyboardButton("close", callback_data='close_data')
                     ]
                 ]
-            ),
-            
+            ),           
             disable_web_page_preview=True, quote=True)
     except FloodWait as e:
         await asyncio.sleep(e.x)
