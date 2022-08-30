@@ -40,6 +40,7 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
                     ]
                 ]
             )
+                                         )
                                          
         elif Config.FORWARD_AS_COPY is False:
             return await bot.forward_messages(chat_id=user_id, from_chat_id=Config.DB_CHANNEL,
