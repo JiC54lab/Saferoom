@@ -31,11 +31,11 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
     try:
         if Config.FORWARD_AS_COPY is True:
             try: rju = await bot.send_message('Decrypting file...\n**ETA** ```1m13s```')
-        await asyncio.sleep(2)
+ 
         rju1 = await rju.edit('Decrypting file...\n**ETA** ```41s```')
-        await asyncio.sleep(2)
+
         rju2 = await rju1.edit('Decrypting file...\n**ETA** ```19s```')
-        await asyncio.sleep(2)
+
         rju3 = await rju2.edit('Decrypting file...\n**ETA** ```4s```')
         rju4 = await rju3.edit('Decryption Complete! Uploading starts...⏳')
         rju5 = await rju4.edit('Decryption Complete! Uploading starts...⌛️')
