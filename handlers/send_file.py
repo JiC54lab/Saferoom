@@ -14,7 +14,7 @@ async def reply_forward(message: Message, file_id: int):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🤖 Join Updates Channel", url="ttps://t.me/{Config.BOT_USERNAME}?start=JiC54_"+_to_b64(str(file_id))})
+                        InlineKeyboardButton("🤖 Join Updates Channel", url="ttps://t.me/{Config.BOT_USERNAME}?start=JiC54_"+{_to_b64(str(file_id))})
                     ],
                     [
                         InlineKeyboardButton("🔄 close 🔄", callback_data='close_data')
