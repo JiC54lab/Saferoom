@@ -29,7 +29,7 @@ async def reply_forward(message: Message, file_id: int):
 
 async def media_forward(bot: Client, user_id: int, file_id: int):
         if Config.FORWARD_AS_COPY is True:
-            try: rju = await bot.send_message('Decrypting file...\n**ETA** ```1m13s```')
+            return rju = await bot.send_message('Decrypting file...\n**ETA** ```1m13s```')
  
         rju1 = await rju.edit('Decrypting file...\n**ETA** ```41s```')
 
