@@ -45,7 +45,7 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
             ),
             
             disable_web_page_preview=True, quote=True)
-                                         )
+                                         
         elif Config.FORWARD_AS_COPY is False:
             return await bot.forward_messages(chat_id=user_id, from_chat_id=Config.DB_CHANNEL,
                                               message_ids=file_id)
