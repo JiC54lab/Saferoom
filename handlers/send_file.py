@@ -10,14 +10,11 @@ from handlers.helpers import str_to_b64
 
 async def reply_forward(message: Message, file_id: int):
     try:
-        await message.reply_text(
-            f"**Here is Sharable Link of this file:**\n"
-            f"https://t.me/{Config.BOT_USERNAME}?start=JiC54_{str_to_b64(str(file_id))}\n\n"
-            f"__To Retrive the Stored File, just open the link!__",
+        await message.reply_text(text="https://t.me/{Config.BOT_USERNAME}?start=JiC54_{str_to_b64(str(file_id))}",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🤖 Join Updates Channel", url="https://t.me/{Config.BOT_USERNAME}?start=JiC54_{str_to_b64(str(file_id))}")
+                        InlineKeyboardButton("🤖 Join Updates Channel", url="ttps://t.me/{Config.BOT_USERNAME}?start=JiC54_"+_to_b64(str(file_id))})
                     ],
                     [
                         InlineKeyboardButton("🔄 close 🔄", callback_data='close_data')
@@ -35,7 +32,20 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
     try:
         if Config.FORWARD_AS_COPY is True:
             return await bot.copy_message(chat_id=user_id, from_chat_id=Config.DB_CHANNEL,
-                                          message_id=file_id)
+                                          message_id=file_id,
+                                          reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("🤖 Join Updates Channel", url="https://t.me/{Config.BOT_USERNAME}?start=JiC54_{str_to_b64(str(file_id))}")
+                    ],
+                    [
+                        InlineKeyboardButton("🔄 close 🔄", callback_data='close_data')
+                    ]
+                ]
+            ),
+            
+            disable_web_page_preview=True, quote=True)
+                                         )
         elif Config.FORWARD_AS_COPY is False:
             return await bot.forward_messages(chat_id=user_id, from_chat_id=Config.DB_CHANNEL,
                                               message_ids=file_id)
