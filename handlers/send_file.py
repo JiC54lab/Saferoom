@@ -30,20 +30,19 @@ async def reply_forward(message: Message, file_id: int):
 async def media_forward(bot: Client, user_id: int, file_id: int):
     try:
         if Config.FORWARD_AS_COPY is True:
-            return rju = await message.reply_text('Decrypting file...\n**ETA** ```1m13s```')
+            return rju = await bot.send_message('Decrypting file...\n**ETA** ```1m13s```')
         await asyncio.sleep(2)
         rju1 = await rju.edit('Decrypting file...\n**ETA** ```41s```')
         await asyncio.sleep(2)
         rju2 = await rju1.edit('Decrypting file...\n**ETA** ```19s```')
-                await asyncio.sleep(2)
+        await asyncio.sleep(2)
         rju3 = await rju2.edit('Decrypting file...\n**ETA** ```4s```')
         rju4 = await rju3.edit('Decryption Complete! Uploading starts...⏳')
         rju5 = await rju4.edit('Decryption Complete! Uploading starts...⌛️')
-            rju6 = await rju5.edit('Uploading\n▣▣▢▢▢▢ 27%')
-    rju7 = await rju6.edit('Uploading\n▣▣▣▢▢▢ 50%')
-    rju8 = await rju7.edit('Uploading\n▣▣▣▣▢▢ 66%')
-    rju9 = await rju8.edit('Uploading\n▣▣▣▣▣▢ 83%')
-    rju10 = await rju9.edit('Uploading\n▣▣▣▣▣▣ 97%')
+        rju6 = await rju5.edit('Uploading\n▣▣▢▢▢▢ 27%')
+        rju7 = await rju6.edit('Uploading\n▣▣▣▢▢▢ 50%')rju8 = await rju7.edit('Uploading\n▣▣▣▣▢▢ 66%')
+        rju9 = await rju8.edit('Uploading\n▣▣▣▣▣▢ 83%')
+        rju10 = await rju9.edit('Uploading\n▣▣▣▣▣▣ 97%')
         await asyncio.sleep(2)
         await rju10.delete()
         await bot.copy_message(chat_id=user_id, from_chat_id=Config.DB_CHANNEL,
