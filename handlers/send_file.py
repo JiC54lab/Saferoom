@@ -20,7 +20,7 @@ async def reply_forward(message: Message, file_id: int):
                         InlineKeyboardButton("🤖 Join Updates Channel", url=f"https://t.me/{Config.BOT_USERNAME}?start=JiC54_{str_to_b64(str(file_id))}")
                     ],
                     [
-                        InlineKeyboardButton("close", callback_data='close_data')
+                        InlineKeyboardButton("close", callback_data=close_data)
                     ]
                 ]
             ),           
