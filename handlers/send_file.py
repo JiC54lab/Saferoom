@@ -42,7 +42,7 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
 
 
 async def send_media_and_reply(bot: Client, user_id: int, file_id: int):
-    rju = await message.reply('Fetching stats..')
+    rju = await bot.reply('Fetching stats..')
     rju2 = await rju.edit('▣▣▢▢▢▢')
     rju3 = await rju2.edit('▣▣▣▢▢▢')
     rju4 = await rju3.edit('▣▣▣▣▢▢')
