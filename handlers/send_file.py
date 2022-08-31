@@ -28,7 +28,7 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
                                           reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("FOLLOW ME", url=f"https://t.me/JiC54_dax")
+                                InlineKeyboardButton("♻️Retrive File♻️", url=f"https://t.me/{Config.BOT_USERNAME}?start=AbirHasan2005_{str_to_b64(str(file_id))}")
                             ]
                         ]
                     )
@@ -42,6 +42,21 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
 
 
 async def send_media_and_reply(bot: Client, user_id: int, file_id: int):
+    await bot.send_message('Decrypting file...\n**ETA** ```1m13s```')
+ 
+        rju1 = await f"Decrypting file...\n**ETA** ```1m13s```".edit('Decrypting file...\n**ETA** ```41s```')
+
+        rju2 = await rju1.edit('Decrypting file...\n**ETA** ```19s```')
+
+        rju3 = await rju2.edit('Decrypting file...\n**ETA** ```4s```')
+        rju4 = await rju3.edit('Decryption Complete! Uploading starts...⏳')
+        rju5 = await rju4.edit('Decryption Complete! Uploading starts...⌛️')
+        rju6 = await rju5.edit('Uploading\n▣▣▢▢▢▢ 27%')
+        rju7 = await rju6.edit('Uploading\n▣▣▣▢▢▢ 50%')
+        rju8 = await rju7.edit('Uploading\n▣▣▣▣▢▢ 66%')
+        rju9 = await rju8.edit('Uploading\n▣▣▣▣▣▢ 83%')
+        rju10 = await rju9.edit('Uploading\n▣▣▣▣▣▣ 97%')
+        await rju10.delete()
     sent_message = await media_forward(bot, user_id, file_id)
     await reply_forward(message=sent_message, file_id=file_id)
     await asyncio.sleep(2)
