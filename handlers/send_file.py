@@ -49,7 +49,6 @@ async def send_media_and_reply(bot: Client, user_id: int, file_id: int):
     rju5 = await rju4.edit('▣▣▣▣▣▢')
     rju6 = await rju5.edit('▣▣▣▣▣▣')
     await asyncio.sleep(3)
-           await rju6.delete()
     sent_message = await media_forward(bot, user_id, file_id)
     await reply_forward(message=sent_message, file_id=file_id)
     await asyncio.sleep(2)
