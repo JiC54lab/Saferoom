@@ -11,8 +11,8 @@ from handlers.helpers import str_to_b64
 async def reply_forward(message: Message, file_id: int):
     try:
         await message.reply_text(
-            f"**Here's sharable link of this File:**\n"
-            f"'```https://t.me/{Config.BOT_USERNAME}?start=JiC54_{str_to_b64(str(file_id))}```'\n"
+            f"**<u>Here's sharable link of this File:**</u>\n"
+            f'📋: "```https://t.me/{Config.BOT_USERNAME}?start=JiC54_{str_to_b64(str(file_id))}```"\n\n'
             f"Just tap to copy link or press **♻️Retrive File♻️** To Retrive the Stored File",
             disable_web_page_preview=True, quote=True)
     except FloodWait as e:
