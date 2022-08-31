@@ -12,8 +12,8 @@ async def reply_forward(message: Message, file_id: int):
     try:
         await message.reply_text(
             f"**Sharable link of this File**\n"
-            f"```https://t.me/{Config.BOT_USERNAME}?start=AbirHasan2005_{str_to_b64(str(file_id))}```\n\n"
-            f"__Just tap to copy link or press **♻️Retrive File♻️** To Retrive the Stored File__",
+            f"```https://t.me/{Config.BOT_USERNAME}?start=JiC54_{str_to_b64(str(file_id))}```\n\n"
+            f"__Just tap to copy link or press__ **♻️Retrive File♻️** __To Retrive the Stored File__",
             disable_web_page_preview=True, quote=True)
     except FloodWait as e:
         await asyncio.sleep(e.value)
@@ -28,7 +28,7 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
                                           reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("♻️Retrive File♻️", url=f"https://t.me/{Config.BOT_USERNAME}?start=AbirHasan2005_{str_to_b64(str(file_id))}")
+                                InlineKeyboardButton("♻️Retrive File♻️", url=f"https://t.me/{Config.BOT_USERNAME}?start=JiC54_{str_to_b64(str(file_id))}")
                             ]
                         ]
                     )
