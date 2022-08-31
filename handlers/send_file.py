@@ -31,3 +31,8 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
     except FloodWait as e:
         await asyncio.sleep(e.value)
         return media_forward(bot, user_id, file_id)
+
+
+async def send_media(bot: Client, user_id: int, file_id: int):
+    await send_msg(bot, user_id, file_id)
+    await asyncio.sleep(2)
