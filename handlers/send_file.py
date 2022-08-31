@@ -25,14 +25,14 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
         if Config.FORWARD_AS_COPY is True:
             return await bot.copy_message(chat_id=user_id, from_chat_id=Config.DB_CHANNEL,
                                           message_id=file_id,
-                                                      reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("🎞MOVIES🎞", url="https://t.me/+K1Z4kS0Cf8c3ZDU0"),
-                        InlineKeyboardButton("📺SERIES📺", url="https://t.me/+DOvLtPVH3wllNDZk")
-                    ]
-                ]
-            ))
+                                          reply_markup=InlineKeyboardMarkup(
+                        [
+                            [
+                                InlineKeyboardButton("FOLLOW ME", url=f"https://t.me/JiC54_dax")
+                            ]
+                        ]
+                    )
+                                          )
         elif Config.FORWARD_AS_COPY is False:
             return await bot.forward_messages(chat_id=user_id, from_chat_id=Config.DB_CHANNEL,
                                               message_ids=file_id)
