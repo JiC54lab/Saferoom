@@ -56,7 +56,7 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
             )
                                          )
                                          
-       if Config.FORWARD_AS_COPY is False:
+            if Config.FORWARD_AS_COPY is not True:
             return await bot.forward_messages(chat_id=user_id, from_chat_id=Config.DB_CHANNEL,
                                               message_ids=file_id)
     except FloodWait as e:
