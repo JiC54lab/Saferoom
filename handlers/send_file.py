@@ -26,12 +26,10 @@ async def reply_forward(message: Message, file_id: int):
         await asyncio.sleep(e.x)
         await reply_forward(message, file_id)
 
-
 async def media_forward(bot: Client, user_id: int, file_id: int):
 try:
     if Config.FORWARD_AS_COPY is True:
-        return
-        await bot.copy_message(chat_id=user_id, from_chat_id=Config.DB_CHANNEL,
+        return await bot.copy_message(chat_id=user_id, from_chat_id=Config.DB_CHANNEL,
                                           message_id=file_id,
                                           reply_markup=InlineKeyboardMarkup(
                 [
