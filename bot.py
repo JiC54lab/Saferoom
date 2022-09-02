@@ -92,7 +92,20 @@ async def start(bot: Client, cmd: Message):
             message_ids = []
             if GetMessage.text:
                 message_ids = GetMessage.text.split(" ")
-                _response_msg = await cmd.reply_text(
+                hehe = await cmd.reply_text(
+                    text=f"**Decrypting**\n\n█████████████ 0%",
+                    quote=True,
+                    parse_mode="Markdown",
+                    disable_web_page_preview=True
+                )
+                hehe1 = await hehe.edit("**Decrypting**\n\n▒████████████ 7%")
+                hehe2 = await hehe1.edit("**Decrypting**\n\n░▒▒██████████ 28%")
+                hehe3 = await hehe2.edit("**Decrypting**\n\n░░░░▒▒▒▒█████ 65%")
+                hehe4 = await hehe3.edit("**Decrypting**\n\n░░░░░░░░░▒▒██ 83%")
+                hehe5 = await hehe4.edit("**Decrypting**\n\n░░░░░░░░░░░░░ 99%")
+                hehe5 = await hehe4.edit(f"**Sending** {len(message_ids)} Files**")
+                await asyncio.sleep(3)
+                await cmd.reply_text(
                     text=f"**Total Files:** `{len(message_ids)}`",
                     quote=True,
                     parse_mode="Markdown",
