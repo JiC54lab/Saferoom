@@ -103,14 +103,10 @@ async def start(bot: Client, cmd: Message):
                 hehe3 = await hehe2.edit("**Decrypting**\n\n░░░░▒▒▒▒█████ 65%")
                 hehe4 = await hehe3.edit("**Decrypting**\n\n░░░░░░░░░▒▒██ 83%")
                 hehe5 = await hehe4.edit("**Decrypting**\n\n░░░░░░░░░░░░░ 99%")
-                hehe5 = await hehe4.edit(f"**Sending** {len(message_ids)} Files**")
-                await asyncio.sleep(3)
-                await cmd.reply_text(
-                    text=f"**Total Files:** `{len(message_ids)}`",
-                    quote=True,
-                    parse_mode="Markdown",
-                    disable_web_page_preview=True
-                )
+                hehe5 = await hehe4.edit(f"**Sending {len(message_ids)} Files**")
+                v = await asyncio.sleep(3)
+                await v.delete()
+                
             else:
                 message_ids.append(int(GetMessage.message_id))
             for i in range(len(message_ids)):
