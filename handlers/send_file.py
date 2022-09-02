@@ -43,12 +43,6 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
 
 
 async def send_media_and_reply(bot: Client, message, user_id: int, file_id: int):
-    halla = await message.reply(
-            "**decrypting**")
-    halla1 = await halla.edit("0%")
-    halla2 = await halla1.edit("50%")
-    halla3 = await halla2.edit("80%")
-    await halla3.edit("100%")
     sent_message = await media_forward(bot, user_id, file_id)
     await reply_forward(message=sent_message, file_id=file_id)
     await asyncio.sleep(2)
