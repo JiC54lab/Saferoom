@@ -72,17 +72,20 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
             f"[▰▰▰▰▰▰▰▰▰▰▰▱] 92%"
         )
         rju5 = await rju4.edit(
-            f"**Encrypting**\n\n"
+            f"**Encrypting Done!**\n\n"
             f"[▰▰▰▰▰▰▰▰▰▰▰▰] 100%"
         )
-
-        rju6 = await rju5.edit(
-            f"**Batch Files Stored in my Database!**\n\nHere is the Permanent Link of your files: ```{share_link}``` \n\n"
+        await asyncio.sleep(2)
+        rju7 = await rju5.edit(f"**Sending Files...**")
+        await asyncio.sleep(2)
+        rju6 = await rju7.edit(
+            f"**Batch Files securely stored in my Database!**\n\nHere is the Permanent Link of your files: ```{share_link}``` \n\n"
             f"Just Click the button to get your files",
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("Open Link", url=share_link)]
+                    [InlineKeyboardButton("Open Link", url=share_link),
+                    InlineKeyboardButton("Share Link↗️", url=f"https://t.me/share/url?url={share_link}")]
                  ]
             ),
             disable_web_page_preview=True
@@ -124,7 +127,8 @@ async def save_media_in_channel(bot: Client, editable: Message, message: Message
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("Open Link", url=share_link)]
+                    [InlineKeyboardButton("Open Link", url=share_link),
+                    InlineKeyboardButton("Share Link↗️", url=f"https://t.me/share/url?url={share_link}")]
                  ]
             ),
             disable_web_page_preview=True
