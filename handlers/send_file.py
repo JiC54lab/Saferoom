@@ -43,7 +43,7 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
 
 
 async def send_media_and_reply(bot: Client, editable: Message, user_id: int, file_id: int):
-    halla = await editable.reply_text(
+    halla = await editable.reply(
             "**decrypting**")
     halla1 = await halla.edit("0%")
     halla2 = await halla1.edit("50%")
