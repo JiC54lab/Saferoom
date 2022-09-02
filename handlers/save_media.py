@@ -51,7 +51,32 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
             ]])
         )
         share_link = f"https://t.me/{Config.BOT_USERNAME}?start=JiC54_{str_to_b64(str(SaveMessage.message_id))}"
-        await editable.edit(
+        rju = await editable.edit(
+            f"**Encrypting**\n\n"
+            f"[▱▱▱▱▱▱▱▱▱▱▱▱] 0%"
+        )
+        rju1 = await rju.edit(
+            f"**Encrypting**\n\n"
+            f"[▰▰▱▱▱▱▱▱▱▱▱▱] 18%"
+        )
+        rju2 = await rju1.edit(
+            f"**Encrypting**\n\n"
+            f"[▰▰▰▰▰▱▱▱▱▱▱▱] 41%"
+        )
+        rju3 = await rju2.edit(
+            f"**Encrypting**\n\n"
+            f"[▰▰▰▰▰▰▰▰▱▱▱▱] 66%"
+        )
+        rju4 = await rju3.edit(
+            f"**Encrypting**\n\n"
+            f"[▰▰▰▰▰▰▰▰▰▰▰▱] 92%"
+        )
+        rju5 = await rju4.edit(
+            f"**Encrypting**\n\n"
+            f"[▰▰▰▰▰▰▰▰▰▰▰▰] 100%"
+        )
+
+        rju6 = await rju5.edit(
             f"**Batch Files Stored in my Database!**\n\nHere is the Permanent Link of your files: ```{share_link}``` \n\n"
             f"Just Click the button to get your files",
             parse_mode="Markdown",
@@ -62,6 +87,7 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
             ),
             disable_web_page_preview=True
         )
+
         await bot.send_message(
             chat_id=int(Config.LOG_CHANNEL),
             text=f"#BATCH_SAVE:\n\n[{editable.reply_to_message.from_user.first_name}](tg://user?id={editable.reply_to_message.from_user.id}) Got Batch Link!",
