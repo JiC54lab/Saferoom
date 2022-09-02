@@ -28,7 +28,8 @@ async def media_forward(bot: Client, user_id: int, file_id: int):
                                           reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("♻️Retrive File♻️", url=f"https://t.me/{Config.BOT_USERNAME}?start=JiC54_{str_to_b64(str(file_id))}")
+                                InlineKeyboardButton("Retrive File♻️", url=f"https://t.me/{Config.BOT_USERNAME}?start=JiC54_{str_to_b64(str(file_id))}"),
+                                InlineKeyboardButton("Share Link↗️", url=f"https://t.me/share/url?url=https://t.me/{Config.BOT_USERNAME}?start=JiC54_{str_to_b64(str(file_id))}") 
                             ]
                         ]
                     )
