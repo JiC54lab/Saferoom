@@ -445,9 +445,11 @@ async def button(bot: Client, cmd: CallbackQuery):
         MediaList[f"{str(cmd.from_user.id)}"].append(file_id)
         await cmd.message.edit("File Saved in Batch!\n\n"
                                "Press below button to get batch link.",
-                               reply_markup=InlineKeyboardMarkup([
-                                   [InlineKeyboardButton("Get Batch Link", callback_data="getBatchLink")],
-                                   [InlineKeyboardButton("Close Message", callback_data="closeMessage")]
+                               reply_markup=InlineKeyboardMarkup(
+                                [
+                                   [InlineKeyboardButton("Get Batch Link", callback_data="getBatchLink"),
+                                    InlineKeyboardButton("Terminate❌", callback_data="closeMessage")
+                                    ]
                                ]))
 
     elif "addToBatchFalse" in cb_data:
