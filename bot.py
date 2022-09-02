@@ -105,7 +105,7 @@ async def start(bot: Client, cmd: Message):
                 hehe5 = await hehe4.edit("**Decrypting**\n\n░░░░░░░░░░░░░ 99%")
                 await asyncio.sleep(3)
                 hehe5 = await hehe4.edit(f"**Sending {len(message_ids)} Files**")
-                await v.delete(2)
+                await hehe5.delete()
                 
             else:
                 message_ids.append(int(GetMessage.message_id))
